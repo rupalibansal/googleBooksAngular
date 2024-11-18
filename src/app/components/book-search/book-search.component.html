@@ -1,0 +1,8 @@
+<!-- src/app/components/book-search/book-search.component.html -->
+<div>
+  <div>
+    <input matInput placeholder="Search for books" [(ngModel)]="query" />
+  </div>
+  <button mat-raised-button (click)="searchBooks()">Search</button>
+</div>
+<app-book-list [books]="books"></app-book-list>

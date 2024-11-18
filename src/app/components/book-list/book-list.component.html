@@ -1,0 +1,9 @@
+<!-- src/app/components/book-list/book-list.component.html -->
+<div *ngFor="let book of books">
+  <div>
+    <h2>{{ book.volumeInfo.title }}</h2>
+    <p>
+      <span>{{ book.volumeInfo.description }}</span>
+    </p>
+  </div>
+</div>
