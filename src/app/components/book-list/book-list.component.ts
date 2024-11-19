@@ -7,7 +7,18 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   templateUrl: './book-list.component.html',
   styleUrls: ['./book-list.component.css'],
+  imports: [CommonModule],
 })
 export class BookListComponent {
-  @Input() books: any[] = [];
+  private _books: any[] = [];
+
+  @Input()
+  set books(value: any[]) {
+    this._books = value;
+    console.log('Books updated:', this._books);
+  }
+
+  get books(): any[] {
+    return this._books;
+  }
 }
